@@ -1,0 +1,13 @@
+server:
+  port: 6101
+spring:
+  application:
+    name: account-server
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.112.130:8848,192.168.112.131:8848
+      config:
+        server-addr: 192.168.112.130:8848,192.168.112.131:8848
+  main:
+    allow-bean-definition-overriding: true
