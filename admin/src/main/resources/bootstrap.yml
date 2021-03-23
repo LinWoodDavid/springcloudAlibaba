@@ -7,8 +7,8 @@ spring:
     nacos:
       discovery:
         server-addr: 192.168.112.130:8848,192.168.112.131:8848
-        metadata:
-          user.name: "admin"
-          user.password: "123456"
+#        metadata:
+#          user.name: "admin"
+#          user.password: "123456"
       config:
         server-addr: 192.168.112.130:8848,192.168.112.131:8848

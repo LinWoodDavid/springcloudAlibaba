@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @FeignClient(name = "account-server")
 public interface AccountServiceClient {
 
-    @GetMapping("name")
+    @GetMapping("/account/name")
     String name();
 
 }

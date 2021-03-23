@@ -9,5 +9,3 @@ spring:
         server-addr: 192.168.112.130:8848,192.168.112.131:8848
       config:
         server-addr: 192.168.112.130:8848,192.168.112.131:8848
-  main:
-    allow-bean-definition-overriding: true

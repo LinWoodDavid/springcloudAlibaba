@@ -18,6 +18,7 @@
         <module>account-application</module>
         <module>account-server</module>
         <module>admin</module>
+        <module>gateway</module>
     </modules>
 
     <properties>
