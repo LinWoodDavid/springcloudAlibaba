@@ -15,6 +15,7 @@
         <module>elasticsearch</module>
         <module>scheduler</module>
         <module>utils</module>
+        <module>mybatis-plus</module>
     </modules>
 
 </project>
