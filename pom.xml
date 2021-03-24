@@ -19,6 +19,7 @@
         <module>account-server</module>
         <module>admin</module>
         <module>gateway</module>
+        <module>core</module>
     </modules>
 
     <properties>
@@ -95,11 +96,6 @@
                 <version>${spring-cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>com.baomidou</groupId>
-                <artifactId>mybatis-plus-boot-starter</artifactId>
-                <version>${mybatis-plus-boot-starter.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.elasticsearch.client</groupId>
