@@ -51,6 +51,11 @@
             <groupId>io.github.openfeign</groupId>
             <artifactId>feign-httpclient</artifactId>
         </dependency>
+        <!--seata-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-seata</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

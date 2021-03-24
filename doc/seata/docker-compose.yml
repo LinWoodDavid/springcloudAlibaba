@@ -1,0 +1,18 @@
+version: "3"
+services:
+  seata-server:
+    container_name: seata-server
+    restart: always
+    image: seataio/seata-server:1.4.1
+    hostname: seata-server
+    ports:
+      - "8091:8091"
+    environment:
+      - SEATA_PORT=8091
+      # 多网卡下最好指定ip，否则可能注册到nacos中的ip不是你想要的ip
+      - SEATA_IP=192.168.112.130
+      # 指定seata配置文件所在的目录(容器内的目录)
+      - SEATA_CONFIG_NAME=file:/seata-server/resources/registry.conf
+    volumes:
+      - ./registry.conf:/seata-server/resources/registry.conf
+      - ./logs:/root/logs
