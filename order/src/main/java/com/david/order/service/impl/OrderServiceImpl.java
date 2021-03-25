@@ -27,6 +27,7 @@ public class OrderServiceImpl implements OrderService {
         OrderInfo orderInfo = new OrderInfo();
         orderInfo.setOrderId(1);
         orderInfoMapper.insert(orderInfo);
-        return true;
+        throw new RuntimeException("手动抛异常");
     }
+
 }
