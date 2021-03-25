@@ -78,3 +78,4 @@
     enable-auto-data-source-proxy: true 自动为Seata开启了代理数据源，实现集成对undo_log表操作
     namespace: seata_namespace_id seata-server一致
     group: SEATA_GROUP seata-server一致
+###

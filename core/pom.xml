@@ -16,6 +16,7 @@
         <module>scheduler</module>
         <module>utils</module>
         <module>mybatis-plus</module>
+        <module>mybatis-plus-generator</module>
     </modules>
 
 </project>
