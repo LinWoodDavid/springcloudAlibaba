@@ -1,0 +1,34 @@
+version: '3.4'
+
+services:
+  nacos:
+    image: nacos/nacos-server:1.3.2
+    container_name: nacos-server
+    restart: always
+    environment:
+      - MYSQL_SERVICE_PASSWORD=nacos
+      - PREFER_HOST_MODE=hostname
+      - MODE=cluster
+      - NACOS_SERVERS=192.168.112.129:8848,192.168.112.130:8848,192.168.112.131:8848
+      - NACOS_SERVER_IP=192.168.112.130
+      - SPRING_DATASOURCE_PLATFORM=mysql
+      - MYSQL_SERVICE_HOST=192.168.112.129
+      - MYSQL_SERVICE_DB_NAME=nacos
+      - MYSQL_SERVICE_USER=root
+      - MYSQL_SERVICE_PASSWORD=root
+      - JVM_XMS=128m
+      - JVM_XMX=256m
+      - JVM_XMN=64m
+    ports:
+      - "8848:8848"
+    volumes:
+      - ./logs:/home/nacos/logs
+      - ./data:/home/nacos/data
+      - ./conf/cluster.conf:/home/nacos/conf/cluster.conf
+    networks:
+      nacos:
+        aliases:
+          - nacos
+networks:
+  nacos:
+    driver: bridge
